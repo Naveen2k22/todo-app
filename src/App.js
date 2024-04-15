@@ -13,15 +13,18 @@ import Register from "./routes/register";
 
 import "@arco-design/web-react/dist/css/arco.css";
 import Home from "./routes/home";
+import WithAuth from "./hoc/withAuth";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<RootLayout />} errorElement={<ErrorPage />}>
-      <Route path={routes.home} element={<Home />} />
+      <Route element={<WithAuth />}>
+        <Route path={routes.home} element={<Home />} />
+      </Route>
       <Route path={routes.login} element={<Login />} />
       <Route path={routes.register} element={<Register />} />
-    </Route>,
-  ),
+    </Route>
+  )
 );
 
 const App = () => {

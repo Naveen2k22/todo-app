@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Form, Input, Button, Notification } from "@arco-design/web-react";
+import { Form, Input, Button } from "@arco-design/web-react";
 import Section from "../components/auth/Section";
 import Container from "../components/auth/Container";
 import Header from "../components/auth/Header";
